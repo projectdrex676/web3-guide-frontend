@@ -1,3 +1,5 @@
+import logo from "../assets/icon.png"; // ✅ Proper import from src/assets
+
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 border-t border-gray-800 py-10 px-6 text-center">
@@ -6,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-center space-y-3">
           <div className="flex items-center gap-2">
             <img
-              src="/src/assets/icon.png"
+              src={logo}
               alt="ProjectDrex"
               className="w-7 h-7 object-contain"
             />
@@ -24,6 +26,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-sm gap-4">
           <p>© {new Date().getFullYear()} ProjectDrex. All rights reserved.</p>
           <div className="flex gap-6 text-gray-500">
+            {/* Uncomment if needed */}
             {/* <a href="#" className="hover:text-indigo-400 transition">Privacy Policy</a>
             <a href="#" className="hover:text-indigo-400 transition">Terms</a>
             <a href="#" className="hover:text-indigo-400 transition">Support</a> */}
