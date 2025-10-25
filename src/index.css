@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px; /* adjust based on navbar height */
+}
+
+/* Fade + slide-up animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.ticker-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: tickerScroll 80s linear infinite;
+}
+
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
