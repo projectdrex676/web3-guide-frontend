@@ -1,6 +1,7 @@
-import heroImg from "../assets/hero-wallet.png"; 
-
 export default function Hero() {
+
+  // ✅ Logo now served from public folder
+  const logo = "/hero-wallet.png";
   return (
     <section className="bg-black text-white px-6 md:px-10 py-10 md:py-16">
       {/* Header */}
