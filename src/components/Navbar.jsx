@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // install with: npm install lucide-react
-import logo from "../assets/icon.png"; // ✅ your logo path
+import logo from "../assets/icon.png"; // ✅ Proper import from src/assets
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
