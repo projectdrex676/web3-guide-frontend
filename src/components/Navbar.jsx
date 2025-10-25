@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // install with: npm install lucide-react
+import logo from "../assets/icon.png"; // ✅ your logo path
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // ✅ Logo now served from public folder
-  const logo = "/icon.png";
 
   return (
     <nav className="fixed top-[38px] left-0 w-full z-40 bg-black/80 backdrop-blur border-b border-gray-800">
@@ -48,6 +46,7 @@ export default function Navbar() {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-black/95 border-t border-gray-800 flex flex-col items-center gap-4 py-6 animate-slide-down cursor-pointer">
+
           <button
             onClick={() => {
               setMenuOpen(false);
