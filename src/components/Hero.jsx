@@ -1,7 +1,6 @@
-export default function Hero() {
-  // ✅ Image now served from the public folder
-  const heroImg = "/hero-wallet.png";
+import heroImg from "../assets/hero-wallet.png"; 
 
+export default function Hero() {
   return (
     <section className="bg-black text-white px-6 md:px-10 py-10 md:py-16">
       {/* Header */}
@@ -15,6 +14,7 @@ export default function Hero() {
 
       {/* Two-column responsive layout */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 max-w-6xl mx-auto">
+
         {/* Left side */}
         <div className="max-w-lg space-y-4 text-center md:text-left">
           <h3 className="text-2xl md:text-3xl font-semibold">
@@ -31,7 +31,7 @@ export default function Hero() {
             onClick={() =>
               document
                 .getElementById("action-grid")
-                ?.scrollIntoView({ behavior: "smooth" })
+                .scrollIntoView({ behavior: "smooth" })
             }
             className="mt-6 px-8 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg hover:opacity-90 transition text-sm md:text-base font-medium cursor-pointer"
           >

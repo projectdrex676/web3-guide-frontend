@@ -1,7 +1,41 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout"; // ✅ shared layout (includes Navbar + Footer)
-import ConnectModal from "../components/ConnectModal"; // ✅ modal component
+import Layout from "../components/Layout"; 
+import ConnectModal from "../components/ConnectModal";
+
+// ✅ Import all wallet & app images directly from src/assets
+import metamask from "../assets/metamask.png";
+import trustwallet from "../assets/trustwallet.png";
+import tokenpocket from "../assets/tokenpocket.png";
+import tronlink from "../assets/tronlink.png";
+import walletconnect from "../assets/walletconnect.png";
+import transitswap from "../assets/transitswap.png";
+import bitpie from "../assets/bitpie.png";
+import bitgetwallet from "../assets/bitgetwallet.png";
+import safepal from "../assets/safepal.png";
+import tonkeeper from "../assets/tonkeeper.png";
+import rainbow from "../assets/rainbow.png";
+import zerion from "../assets/zerion.png";
+import spot from "../assets/spot.png";
+import solfare from "../assets/solfare.png";
+import atomicwallet from "../assets/atomicwallet.png";
+import coinbase from "../assets/coinbase.png";
+import okxwallet from "../assets/okxwallet.png";
+import blockchain from "../assets/blockchain.png";
+import binance from "../assets/binance.png";
+
+import uniswap from "../assets/uniswap.png";
+import rabby from "../assets/rabby.png";
+import swappy from "../assets/swappy.png";
+import ixir from "../assets/ixir.png";
+import opentheta from "../assets/opentheta.png";
+import opensea from "../assets/opensea.png";
+import argent from "../assets/argent.png";
+import farcaster from "../assets/farcaster.png";
+import fireblocks from "../assets/fireblocks.png";
+import axieinfinity from "../assets/axieinfinity.png";
+import dexcoinapp from "../assets/dexcoinapp.png";
+import traderdao from "../assets/traderdao.png";
 
 export default function WalletsPage() {
   useEffect(() => {
@@ -12,43 +46,43 @@ export default function WalletsPage() {
   const [activeTab, setActiveTab] = useState("apps");
 
   const wallets = [
-    { name: "MetaMask", logo: "/metamask.png" },
-    { name: "TrustWallet", logo: "/trustwallet.png" },
-    { name: "TokenPocket", logo: "/tokenpocket.png" },
-    { name: "Tronlink", logo: "/tronlink.png" },
-    { name: "WalletConnect", logo: "/walletconnect.png" },
-    { name: "Transit Swap", logo: "/transitswap.png" },
-    { name: "BitPie", logo: "/bitpie.png" },
-    { name: "BitgetWallet", logo: "/bitgetwallet.png" },
-    { name: "SafePal", logo: "/safepal.png" },
-    { name: "Ton Keeper", logo: "/tonkeeper.png" },
-    { name: "Rainbow", logo: "/rainbow.png" },
-    { name: "Zerion", logo: "/zerion.png" },
-    { name: "Spot", logo: "/spot.png" },
-    { name: "Solfare", logo: "/solfare.png" },
-    { name: "Atomic Wallet", logo: "/atomicwallet.png" },
-    { name: "Coinbase", logo: "/coinbase.png" },
-    { name: "OKX Wallet", logo: "/okxwallet.png" },
-    { name: "Blockchain.com", logo: "/blockchain.png" },
-    { name: "Binance Web3 Wallet", logo: "/binance.png" },
+    { name: "MetaMask", logo: metamask },
+    { name: "TrustWallet", logo: trustwallet },
+    { name: "TokenPocket", logo: tokenpocket },
+    { name: "Tronlink", logo: tronlink },
+    { name: "WalletConnect", logo: walletconnect },
+    { name: "Transit Swap", logo: transitswap },
+    { name: "BitPie", logo: bitpie },
+    { name: "BitgetWallet", logo: bitgetwallet },
+    { name: "SafePal", logo: safepal },
+    { name: "Ton Keeper", logo: tonkeeper },
+    { name: "Rainbow", logo: rainbow },
+    { name: "Zerion", logo: zerion },
+    { name: "Spot", logo: spot },
+    { name: "Solfare", logo: solfare },
+    { name: "Atomic Wallet", logo: atomicwallet },
+    { name: "Coinbase", logo: coinbase },
+    { name: "OKX Wallet", logo: okxwallet },
+    { name: "Blockchain.com", logo: blockchain },
+    { name: "Binance Web3 Wallet", logo: binance },
   ];
 
   const apps = [
-    { name: "Uniswap", logo: "/uniswap.png" },
-    { name: "Rabby", logo: "/rabby.png" },
-    { name: "Swappy", logo: "/swappy.png" },
-    { name: "Ixir", logo: "/ixir.png" },
-    { name: "OpenTheta", logo: "/opentheta.png" },
-    { name: "OpenSea", logo: "/opensea.png" },
-    { name: "Argent", logo: "/argent.png" },
-    { name: "Farcaster", logo: "/farcaster.png" },
-    { name: "Binance", logo: "/binance.png" },
-    { name: "FireBlocks", logo: "/fireblocks.png" },
-    { name: "Axie Infinity", logo: "/axieinfinity.png" },
-    { name: "DexCoin App", logo: "/dexcoinapp.png" },
-    { name: "BitgetWallet", logo: "/bitgetwallet.png" },
-    { name: "Trader DAO", logo: "/traderdao.png" },
-    { name: "Trust Wallet", logo: "/trustwallet.png" },
+    { name: "Uniswap", logo: uniswap },
+    { name: "Rabby", logo: rabby },
+    { name: "Swappy", logo: swappy },
+    { name: "Ixir", logo: ixir },
+    { name: "OpenTheta", logo: opentheta },
+    { name: "OpenSea", logo: opensea },
+    { name: "Argent", logo: argent },
+    { name: "Farcaster", logo: farcaster },
+    { name: "Binance", logo: binance },
+    { name: "FireBlocks", logo: fireblocks },
+    { name: "Axie Infinity", logo: axieinfinity },
+    { name: "DexCoin App", logo: dexcoinapp },
+    { name: "BitgetWallet", logo: bitgetwallet },
+    { name: "Trader DAO", logo: traderdao },
+    { name: "Trust Wallet", logo: trustwallet },
   ];
 
   const currentList = activeTab === "apps" ? apps : wallets;
@@ -97,13 +131,13 @@ export default function WalletsPage() {
           {currentList.map((item) => (
             <div
               key={item.name}
-              onClick={() => setSelectedItem(item)} // ✅ open modal
+              onClick={() => setSelectedItem(item)}
               className="bg-[#0b0b0b] border border-gray-800 hover:border-indigo-500 rounded-2xl p-8 flex flex-col items-center transition cursor-pointer"
             >
               <img
                 src={item.logo}
                 alt={item.name}
-                className="w-20 h-25 object-contain mb-4"
+                className="w-20 h-20 object-contain mb-4"
               />
               <p className="text-sm text-gray-300">{item.name}</p>
             </div>
