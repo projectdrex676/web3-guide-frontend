@@ -24,12 +24,11 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col items-center text-sm gap-4">
+           
           <p>© {new Date().getFullYear()} ProjectDrex. All rights reserved.</p>
-          <div className="flex gap-6 text-gray-500">
+          <div className="flex items-center gap-6 text-gray-500">
             {/* Uncomment if needed */}
-            {/* <a href="#" className="hover:text-indigo-400 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-indigo-400 transition">Terms</a>
-            <a href="#" className="hover:text-indigo-400 transition">Support</a> */}
+            <a href="#" className="hover:text-indigo-400 transition">Contact Support</a>
           </div>
         </div>
       </div>

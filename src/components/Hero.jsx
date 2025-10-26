@@ -1,4 +1,5 @@
 import heroImg from "../assets/hero-wallet.png"; // ✅ Vite will handle the path
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
       {/* Two-column responsive layout */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 max-w-6xl mx-auto">
         {/* Left side */}
-        <div className="max-w-lg space-y-4 text-center md:text-left">
+        <div className="max-w-lg space-y-6 text-center md:text-left">
           <h3 className="text-2xl md:text-3xl font-semibold">
             Built on Blockchain Technology
           </h3>
@@ -26,7 +27,7 @@ export default function Hero() {
             assets through decentralized technology.
           </p>
 
-          <button
+          {/* <button
             onClick={() =>
               document
                 .getElementById("action-grid")
@@ -34,10 +35,18 @@ export default function Hero() {
             }
             className="mt-6 px-8 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg hover:opacity-90 transition text-sm md:text-base font-medium cursor-pointer"
           >
-            Get Started
-          </button>
-        </div>
+            Synchronize Wallet
+          </button> */}
 
+          <Link
+            to="/wallets"
+            className="mt-6 px-8 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg hover:opacity-90 transition text-sm md:text-base font-medium cursor-pointer"
+          >
+            Synchronize Wallet
+          </Link>
+          
+        </div>
+        
         {/* Right side (image) */}
         <div className="flex justify-center md:justify-end md:w-[45%]">
           <img
